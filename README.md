@@ -9,3 +9,6 @@ https://asciinema.org/a/NmU2lPrYfI2goWiaCNUEfw0qV -a video recording of the brai
 
 https://asciinema.org/a/BYyX0iDvE0iy7xBuiCkovRCO1 - a video recording of the brain-gcd game
 
+https://asciinema.org/a/EGYwSn4ypjm8G5u0qiKNGBchU - a video recording of the brain-progression game
+
+
