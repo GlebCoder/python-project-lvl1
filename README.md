@@ -11,4 +11,5 @@ https://asciinema.org/a/BYyX0iDvE0iy7xBuiCkovRCO1 - a video recording of the bra
 
 https://asciinema.org/a/EGYwSn4ypjm8G5u0qiKNGBchU - a video recording of the brain-progression game
 
+ https://asciinema.org/a/flhu4JGfyiZUEkxLfHJN8gn0e avideo recording of the brain-prime game
 
