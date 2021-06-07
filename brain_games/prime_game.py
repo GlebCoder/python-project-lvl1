@@ -32,8 +32,7 @@ def prime_game():
             result = "yes"
         else:
             result = "no"
-        
-        # Determining the question  
+        # Determining the question
         question = "Question: {}".format(str(number))
         # Comparing a user answer with the right result and saying goodbuy
         print(question)
