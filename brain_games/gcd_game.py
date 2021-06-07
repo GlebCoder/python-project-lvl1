@@ -2,8 +2,7 @@
 import math
 import prompt
 from random import randint
-from brain_games import gcd
-from math import gcd
+
 
 def gcd_game():
     # Hello and addressing the person by their name
@@ -32,7 +31,3 @@ def gcd_game():
             print("'" + user_answer + "'" " is wrong answer ;(. Correct answer was '" + str(result) + "'.")
             return print("Let's try again, {}!".format(name))
     return print("Congratulations, {}!".format(name))
-
-
-
-

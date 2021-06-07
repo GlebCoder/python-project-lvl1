@@ -2,6 +2,7 @@
 import prompt
 from random import randint
 
+
 def calc():
     # Hello and addressing the person by their name
     print("Welcome to the Brain Games!")
@@ -27,7 +28,6 @@ def calc():
         else:
             result = number1 * number2
             question = "Question: " + str(number1) + " * " + str(number2)
-        
         # Comparing a user answer with the right result and saying goodbuy
         print(question)
         user_answer = prompt.string("Your answer: ")
@@ -38,7 +38,3 @@ def calc():
             print("'" + user_answer + "'" " is wrong answer ;(. Correct answer was '" + str(result) + "'.")
             return print("Let's try again, {}!".format(name))
     return print("Congratulations, {}!".format(name))
-
-
-
-
