@@ -26,9 +26,9 @@ def prime_game():
     index = 1
     while index <= 3:
         number = randint(1, 100)
-        # Finding whether this number is prime. 
+        # Finding whether this number is prime.
         # Idea - prime numbers can be represented in a form 6n+1 or 6n-1
-        if is_prime(number) == True:
+        if is_prime(number):
             result = "yes"
         else:
             result = "no"
