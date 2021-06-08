@@ -28,6 +28,7 @@ def gcd_game():
             print("Correct!")
             index += 1
         else:
-            print("'" + user_answer + "'" " is wrong answer ;(. Correct answer was '" + str(result) + "'.")
+            print(f"'{user_answer}' is wrong answer ;(.", end=" ")
+            print(f"Correct answer was '{str(result)}'")
             return print("Let's try again, {}!".format(name))
     return print("Congratulations, {}!".format(name))

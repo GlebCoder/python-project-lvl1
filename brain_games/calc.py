@@ -21,13 +21,13 @@ def calc():
         check_point = (number1 + number2) % 3
         if check_point == 0:
             result = number1 + number2
-            question = "Question: " + str(number1) + " + " + str(number2)
+            question = f"Question: {str(number1)} + {str(number2)}"
         elif check_point == 1:
             result = number1 - number2
-            question = "Question: " + str(number1) + " - " + str(number2)
+            question = f"Question: {str(number1)} - {str(number2)}"
         else:
             result = number1 * number2
-            question = "Question: " + str(number1) + " * " + str(number2)
+            question = f"Question: {str(number1)} * {str(number2)}"
         # Comparing a user answer with the right result and saying goodbuy
         print(question)
         user_answer = prompt.string("Your answer: ")
@@ -35,6 +35,7 @@ def calc():
             print("Correct!")
             index += 1
         else:
-            print("'" + user_answer + "'" " is wrong answer ;(. Correct answer was '" + str(result) + "'.")
+            print(f"'{user_answer}' is wrong answer ;(.", end=" ")
+            print(f"Correct answer was '{str(result)}'")
             return print("Let's try again, {}!".format(name))
     return print("Congratulations, {}!".format(name))

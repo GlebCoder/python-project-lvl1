@@ -12,7 +12,9 @@ def even_or_not():
         value = randint(1, 100)
         print('Question: {}'.format(value))
         answer = prompt.string("Your answer: ")
-        if (value % 2 == 0 and answer.lower() == "no") or (value % 2 == 1 and answer.lower() == "yes"):
+        if value % 2 == 0 and answer.lower() == "no":
+            return print("Let's try again, {}!".format(name))
+        elif value % 2 == 1 and answer.lower() == "yes":
             return print("Let's try again, {}!".format(name))
         else:
             print("Correct!")
