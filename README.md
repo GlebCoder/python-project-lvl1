@@ -1,11 +1,11 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/GlebCoder/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/GlebCoder/python-project-lvl1/actions)
 
-[![Lint check workflow]](https://github.com/GlebCoder/python-project-lvl1/actions/workflows/lint-check.yml/badge.svg)
+[![Lint check workflow](https://github.com/GlebCoder/python-project-lvl1/actions/workflows/lint-check.yml/badge.svg)]()
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-[[!Game image]](https://www.google.com/imgres?imgurl=https%3A%2F%2Fhappytimegames.com%2Fwp-content%2Fuploads%2F2020%2F12%2FBrian-Games.png&imgrefurl=https%3A%2F%2Fhappytimegames.com%2Fdo-brain-games-really-work%2F&tbnid=5ldvrW9rWoa9FM&vet=12ahUKEwj4yqf3-8HxAhXx_CoKHV0BCUMQMygLegUIARDFAQ..i&docid=3rbv6Mal3i4o1M&w=960&h=568&q=brain%20games%20pics&ved=2ahUKEwj4yqf3-8HxAhXx_CoKHV0BCUMQMygLegUIARDFAQ)
+[![Game image](https://www.google.com/imgres?imgurl=https%3A%2F%2Fhappytimegames.com%2Fwp-content%2Fuploads%2F2020%2F12%2FBrian-Games.png&imgrefurl=https%3A%2F%2Fhappytimegames.com%2Fdo-brain-games-really-work%2F&tbnid=5ldvrW9rWoa9FM&vet=12ahUKEwj4yqf3-8HxAhXx_CoKHV0BCUMQMygLegUIARDFAQ..i&docid=3rbv6Mal3i4o1M&w=960&h=568&q=brain%20games%20pics&ved=2ahUKEwj4yqf3-8HxAhXx_CoKHV0BCUMQMygLegUIARDFAQ)]()
 
 «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
