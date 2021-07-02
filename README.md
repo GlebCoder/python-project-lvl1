@@ -3,6 +3,7 @@
 [![Lint check workflow](https://github.com/GlebCoder/python-project-lvl1/actions/workflows/lint-check.yml/badge.svg)]()
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
+![image](https://user-images.githubusercontent.com/82165307/124227874-01259080-db14-11eb-95a5-166403195b49.png)
 
 ## Общее описание и примеры
 
