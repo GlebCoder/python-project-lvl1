@@ -1,8 +1,7 @@
 #!usr/bin/env python
-import math
 import prompt
-import engine
-from random import randint
+
+from brain_games import engine
 
 
 def gcd_game():
@@ -10,5 +9,5 @@ def gcd_game():
     engine.welcome()
     name = prompt.string("May I have your name? ")
     print("Hello, {}".format(name))
-    engine.game_question(game_name)
-    engine.loop(game_name, name)
+    engine.game_condition(game_name)
+    engine.questions_gcd(game_name, name)

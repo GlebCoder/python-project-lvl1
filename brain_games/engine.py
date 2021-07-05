@@ -14,9 +14,11 @@ def welcome():
     return print("Welcome to the Brain games!")
 
 
-def game_question(game_name):
+def game_condition(game_name):
     if game_name == "brain-even":
-        return print('Answer "yes" if the number is even, otherwise answer "no".')
+        part1 = 'Answer "yes" if the number is even, '
+        part2 = 'otherwise answer "no".'
+        return print(part1 + part2)
     if game_name == "brain-calc":
         return print("What is the result of the expression?")
     if game_name == "brain-progression":
@@ -24,7 +26,9 @@ def game_question(game_name):
     if game_name == "brain-gcd":
         return print("Find the greatest common divisor of given numbers")
     if game_name == "brain-prime":
-        return print('Answer "yes" if a given number is prime. Otherwise answer "no".')
+        part1 = 'Answer "yes" if a given number is prime. '
+        part2 = 'Otherwise answer "no".'
+        return print(part1 + part1)
 
 
 def correct():
@@ -62,47 +66,82 @@ def is_even(number):
         return "no"
 
 
-def loop(game_name, name):
+def questions_even(game_name, name):
     for i in range(1, num_q + 1):
-        if game_name == 'brain-even':
-            value = randint(1, 100)
-            result = is_even(value)
-            print("Question: ", value)
-        if game_name == 'brain-calc':
-            num1 = randint(1, 100)
-            num2 = randint(1, 100)
-            op_dict = {'+': operator.add,
-                       '-': operator.sub, '*': operator.mul}
-            op = random.choice(list(op_dict.keys()))
-            result = str(op_dict.get(op)(num1, num2))
-            print(f'Question: {num1} {op} {num2}')
-        if game_name == 'brain-gcd':
-            num1 = randint(1, 100)
-            num2 = randint(1, 100)
-            result = str(math.gcd(num1, num2))
-            print(f'Question: {num1} {num2}')
-        if game_name == 'brain-prime':
-            num = randint(1, 100)
-            if is_prime.is_prime(num):
-                result = 'yes'
+        value = randint(1, 100)
+        result = is_even(value)
+        print("Question: ", value)
+        user_answer = prompt.string("Your answer: ")
+        if result == user_answer.lower():
+            correct()
+        else:
+            return sad_bye(game_name, name, result, user_answer)
+    return you_win(name)
+
+
+def questions_calc(game_name, name):
+    for i in range(1, num_q + 1):
+        num1 = randint(1, 100)
+        num2 = randint(1, 100)
+        op_dict = {'+': operator.add,
+                   '-': operator.sub, '*': operator.mul}
+        op = random.choice(list(op_dict.keys()))
+        result = str(op_dict.get(op)(num1, num2))
+        print(f'Question: {num1} {op} {num2}')
+        user_answer = prompt.string("Your answer: ")
+        if result == user_answer.lower():
+            correct()
+        else:
+            return sad_bye(game_name, name, result, user_answer)
+    return you_win(name)
+
+
+def questions_gcd(game_name, name):
+    for i in range(1, num_q + 1):
+        num1 = randint(1, 100)
+        num2 = randint(1, 100)
+        result = str(math.gcd(num1, num2))
+        print(f'Question: {num1} {num2}')
+        user_answer = prompt.string("Your answer: ")
+        if result == user_answer.lower():
+            correct()
+        else:
+            return sad_bye(game_name, name, result, user_answer)
+    return you_win(name)
+
+
+def questions_prime(game_name, name):
+    for i in range(1, num_q + 1):
+        num = randint(1, 100)
+        if is_prime.is_prime(num):
+            result = 'yes'
+        else:
+            result = 'no'
+        print(f'Question: {num}')
+        user_answer = prompt.string("Your answer: ")
+        if result == user_answer.lower():
+            correct()
+        else:
+            return sad_bye(game_name, name, result, user_answer)
+    return you_win(name)
+
+
+def questions_progression(game_name, name):
+    for i in range(1, num_q + 1):
+        question = ""
+        d = randint(1, 10)
+        n = randint(5, 10)
+        a0 = randint(1, 10)
+        place_for_question = randint(1, n)
+        i = 1
+        while i <= n:
+            if i != place_for_question:
+                question += str(a0 + d * (i - 1)) + " "
             else:
-                result = 'no'
-            print(f'Question: {num}')
-        if game_name == 'brain-progression':
-            question = ""
-            d = randint(1, 10)
-            n = randint(5, 10)
-            a0 = randint(1, 10)
-            place_for_question = randint(1, n)
-            i = 1
-            while i <= n:
-                if i != place_for_question:
-                    question += str(a0 + d * (i - 1)) + " "
-                else:
-                    question += ".. "
-                i += 1
-            result = str(a0 + d * (place_for_question - 1))
-            print(f'Question: {question}')
+                question += ".. "
+            i += 1
+        result = str(a0 + d * (place_for_question - 1))
+        print(f'Question: {question}')
         user_answer = prompt.string("Your answer: ")
         if result == user_answer.lower():
             correct()
