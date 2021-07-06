@@ -70,7 +70,7 @@ def questions_even(game_name, name):
     for i in range(1, num_q + 1):
         value = randint(1, 100)
         result = is_even(value)
-        print("Question: ", value)
+        print(f"Question: {value}")
         user_answer = prompt.string("Your answer: ")
         if result == user_answer.lower():
             correct()
@@ -128,7 +128,7 @@ def questions_prime(game_name, name):
 
 def questions_progression(game_name, name):
     for i in range(1, num_q + 1):
-        question = ""
+        progression = ""
         d = randint(1, 10)
         n = randint(5, 10)
         a0 = randint(1, 10)
@@ -136,12 +136,12 @@ def questions_progression(game_name, name):
         i = 1
         while i <= n:
             if i != place_for_question:
-                question += str(a0 + d * (i - 1)) + " "
+                progression += str(a0 + d * (i - 1)) + " "
             else:
-                question += ".. "
+                progression += ".. "
             i += 1
         result = str(a0 + d * (place_for_question - 1))
-        print(f'Question: {question}')
+        print(f'Question: {progression}')
         user_answer = prompt.string("Your answer: ")
         if result == user_answer.lower():
             correct()
