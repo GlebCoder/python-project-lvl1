@@ -56,7 +56,7 @@ def sad_bye(game_name, name, result, user_answer):
 
 
 def you_win(name):
-    print(f"Congratulations, {name}")
+    print(f"Congratulations, {name}!")
 
 
 def is_even(number):
