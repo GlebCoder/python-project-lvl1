@@ -37,10 +37,10 @@ def correct():
 
 def sad_bye(game_name, name, result, user_answer):
     if game_name == "brain-even":
-        print(f"Let's try again, {name}")
+        print(f"Let's try again, {name}!")
     if game_name == "brain-prime":
         print("Unfortunately, you have given the wrong answer.")
-        print(f"Let's try again, {name}")
+        print(f"Let's try again, {name}!")
     if game_name == "brain-calc":
         print(f"'{user_answer}' is wrong answer ;(.", end=" ")
         print(f"Correct answer was '{str(result)}'")
