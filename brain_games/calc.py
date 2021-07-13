@@ -3,11 +3,8 @@ from random import randint
 import operator
 import random
 
-from brain_games import engine_new
 
-
-def print_game_condition():
-    return print("What is the result of the expression?")
+GAME_CONDITION = "What is the result of the expression?"
 
 
 def generate_questions(number):
@@ -42,15 +39,3 @@ def generate_right_answers(questions):
                 result = num1 * num2
                 right_answers.append(str(result))
     return right_answers
-
-
-def run_game():
-    engine_new.welcome()
-    name = engine_new.get_name()
-    engine_new.print_hi(name)
-    print_game_condition()
-    game_questions = generate_questions(engine_new.num_q)
-    right_answers = generate_right_answers(game_questions)
-    if engine_new.general_script(game_questions, right_answers, goodbye_opt=1):
-        return engine_new.user_wins(name)
-    return engine_new.user_looses(name)

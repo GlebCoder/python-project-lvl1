@@ -47,3 +47,13 @@ def print_goodbye_option(user_answer, right_answer):
 
 def user_looses(name):
     return print(f"Let's try again, {name}!")
+
+
+def run_game(game_condition, game_questions, right_answers):
+    welcome()
+    name = get_name()
+    print_hi(name)
+    print(game_condition)
+    if general_script(game_questions, right_answers):
+        return user_wins(name)
+    return user_looses(name)
