@@ -8,16 +8,15 @@ END_OF_RANGE = 100
 
 
 def is_prime(number):
-    if number <= 3:
-        return number > 1
-    if number % 2 == 0 or number % 3 == 0:
+    if number > 1:
+        for index in range(2, number // 2 + 1):
+            if number % index != 0:
+                continue
+            else:
+                return False
+        return True
+    else:
         return False
-    i = 5
-    while i ** 2 <= number:
-        if number % i == 0 or number % (i + 2) == 0:
-            return False
-        i += 6
-    return True
 
 
 def generate_question_and_answer():
