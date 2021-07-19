@@ -4,9 +4,7 @@ from brain_games import engine
 
 
 def main():
-    GAME_CONDITION = calc.GAME_CONDITION
-    question_and_answer = calc.generate_question_and_answer
-    engine.run_game(GAME_CONDITION, question_and_answer)
+    engine.run_game(calc.GAME_CONDITION, calc.generate_question_and_answer)
 
 
 if __name__ == "__main__":
