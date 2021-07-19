@@ -5,17 +5,17 @@ import random
 
 
 GAME_CONDITION = "What is the result of the expression?"
-START_OF_RANGE = 1
-END_OF_RANGE = 100
+MIN_VAL = 1
+MAX_VAL = 100
 
 
 def generate_question_and_answer():
-    num1 = randint(START_OF_RANGE, END_OF_RANGE)
-    num2 = randint(START_OF_RANGE, END_OF_RANGE)
-    op_dict = {'+': operator.add,
-               '-': operator.sub,
-               '*': operator.mul}
-    op = random.choice(list(op_dict.keys()))
-    question = f'{num1} {op} {num2}'
-    answer = str(op_dict[op](num1, num2))
+    num1 = randint(MIN_VAL, MAX_VAL)
+    num2 = randint(MIN_VAL, MAX_VAL)
+    operators = {'+': operator.add,
+                 '-': operator.sub,
+                 '*': operator.mul}
+    random_operator = random.choice(list(operators.keys()))
+    question = f'{num1} {random_operator} {num2}'
+    answer = str(operators[random_operator](num1, num2))
     return question, answer

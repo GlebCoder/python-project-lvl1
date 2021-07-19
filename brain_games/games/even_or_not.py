@@ -2,34 +2,18 @@ from random import randint
 
 
 GAME_CONDITION = 'Answer "yes" if the number is even, otherwise answer "no".'
-START_OF_RANGE = 1
-END_OF_RANGE = 100
+MIN_VAL = 1
+MAX_VAL = 100
 
 
 def is_even(number):
-    if number % 2 == 0:
-        return True
-    return False
+    return number % 2 == 0
 
 
 def generate_question_and_answer():
-    question = randint(START_OF_RANGE, END_OF_RANGE)
+    question = randint(MIN_VAL, MAX_VAL)
     if is_even(question):
         answer = 'yes'
     else:
         answer = 'no'
-    return question, answer
-
-
-def generate_questions():
-    question = randint(1, 100)
-    return question
-
-
-def generate_right_answers(questions):
-    right_answer = ''
-    if is_even(questions):
-        right_answer = 'yes'
-    else:
-        right_answer = 'no'
-    return right_answer
+    return str(question), answer

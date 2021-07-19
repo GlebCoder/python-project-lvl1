@@ -2,7 +2,7 @@
 import prompt
 
 
-NUM_Q = 3  # Number of questions in brain-games
+MAX_NUN_OF_QUESTIONS = 3  # Maximal number of questions in brain-games
 
 
 def print_goodbye_option(user_answer, right_answer):
@@ -15,7 +15,7 @@ def run_game(game_condition, question_and_answer, goodbye_opt=0):
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}")
     print(game_condition)
-    for index in range(NUM_Q):
+    for _ in range(MAX_NUN_OF_QUESTIONS):
         question, right_answer = question_and_answer()
         print(f"Question: {question}")
         user_answer = prompt.string('Your answer: ')

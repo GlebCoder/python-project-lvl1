@@ -23,4 +23,4 @@ def generate_question_and_answer():
         answer = 'yes'
     else:
         answer = 'no'
-    return question, answer
+    return str(question), answer
