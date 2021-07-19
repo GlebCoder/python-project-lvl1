@@ -12,10 +12,7 @@ MIN_FIRST_MEMBER = 1
 MAX_FIRST_MEMBER = 10
 
 
-def generate_progression():
-    common_diff = randint(MIN_COMMON_DIFF, MAX_COMMON_DIFF)
-    length = randint(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH)
-    first_member = randint(MIN_FIRST_MEMBER, MAX_FIRST_MEMBER)
+def generate_progression(common_diff, length, first_member):
     progression = []
     for i in range(length):
         progression.append(str(first_member + common_diff * i))
@@ -23,7 +20,10 @@ def generate_progression():
 
 
 def generate_question_and_answer():
-    progression = generate_progression()
+    common_diff = randint(MIN_COMMON_DIFF, MAX_COMMON_DIFF)
+    length = randint(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH)
+    first_member = randint(MIN_FIRST_MEMBER, MAX_FIRST_MEMBER)
+    progression = generate_progression(common_diff, length, first_member)
     random_index = random.choice(range(len(progression)))
     missing_member = progression[random_index]
     progression[random_index] = '..'
