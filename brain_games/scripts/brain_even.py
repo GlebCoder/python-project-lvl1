@@ -4,8 +4,7 @@ from brain_games import engine
 
 
 def main():
-    engine.run_game(even_or_not.GAME_CONDITION,
-                    even_or_not.generate_question_and_answer)
+    engine.run_game(even_or_not)
 
 
 if __name__ == "__main__":
